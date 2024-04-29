@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Cuaca</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <style>        
+        .popup {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .popup-content {
+            background-color: #fefefe;
+            margin: 20% auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .button-close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .button-close:hover,
+        .button-close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .infocuaca-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .infocuaca-info {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .infocuaca-info:last-child {
+            border-bottom: none;
+        }
+
+        .infocuaca-info h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .infocuaca-info p {
+            margin: 0;
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Info Cuaca</h1>
+        <input type="text" id="lokasi" placeholder="Masukkan nama lokasi">
+        <button id="submit">Cek Cuaca</button>
+        <button id="reset">Reset</button>
+        <div id="infocuaca"></div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="button-close">&times;</span>
+                <p>Loading...</p>
+            </div>
+        </div>
+    </center>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hide Elements</title>
+</head>
+<body>
+
+<div>
+    <p id="elementWithoutClass">Element tanpa class</p>
+</div>
+
+<div class="myClass">
+    <p id="elementWithClass">Element dengan class 'myClass'</p>
+</div>
+
+<div>
+    <a href="#" id="elementWithAttribute">Element dengan atribut href</a>
+</div>
+
+<button onclick="hideElement()">Sembunyikan elemen tanpa class</button>
+<button onclick="hideElementsByClass()">Sembunyikan elemen dengan class 'myClass'</button>
+<button onclick="hideElementsByAttribute()">Sembunyikan elemen dengan atribut href</button>
+
+<script>
+function hideElement() {
+    var elementWithoutClass = document.getElementById('elementWithoutClass');
+    elementWithoutClass.style.display = 'none';
+}
+
+function hideElementsByClass() {
+    var elementsWithClass = document.getElementsByClassName('myClass');
+    for (var i = 0; i < elementsWithClass.length; i++) {
+        elementsWithClass[i].style.display = 'none';
+    }
+}
+
+function hideElementsByAttribute() {
+    var elementWithAttribute = document.getElementById('elementWithAttribute');
+    elementWithAttribute.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
